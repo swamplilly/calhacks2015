@@ -13,24 +13,25 @@
   z-index: 1000; }
 
 #text {
-  width: 400px;
-  height: 100px;
   text-align: center;
   vertical-align: middle;
-  line-height: 100px;
+  line-height: 50px;
   position: absolute;
   left: 45%;
   top: 45%;
   margin: -100px 0 0 -150px;
-  font-size: 35px; }
+  font-size: 35px;
+  font-family: sans-serif; }
 
-#submit {
-  ext-align: center;
-  vertical-align: middle;
+#submitwrap {
   line-height: 100px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -100px 0 0 -150px; }
+  margin: 0 auto;
+  margin-top: -10px; }
+
+.inputzip {
+  width: 250px;
+  height: 40px;
+  font-size: 35px;
+  top: 45%; }
 
 /*# sourceMappingURL=bamfstyle.css.map */
