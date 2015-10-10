@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CACA;EACC,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC",
+"sources": ["bamfstyle.scss"],
+"names": [],
+"file": "bamfstyle.css"
+}
