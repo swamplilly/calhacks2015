@@ -18,34 +18,5 @@
 		<button onclick="getLocation(); showPosition();">boop</button>
 		</div>
 	</div>
-
-	<script>
-	// window.onload = function() 
-	// {
-		var x = document.getElementById("geotest");
-		var lat, lon;
-
-		function getLocation()
-		{
-    		if (navigator.geolocation)
-  		  	{
-        		navigator.geolocation.getCurrentPosition(showPosition, error);
-    		} else
-    		{ 
-        		x.innerHTML = "Geolocation is not supported by this browser.";
-    		}
-		}
-
-		function showPosition(position) {
-			// lat = "13";
-    		x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-		}
-
-		function error()
-		{
-
-		}
-	// }
-	</script>
 </body>
 </html>
