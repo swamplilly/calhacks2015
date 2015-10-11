@@ -53,6 +53,11 @@ window.onload = function()
 		document.getElementById("bg").style.backgroundColor=getRandomColor();
 	}
 
+	function randomizeFontColor()
+	{
+		document.getElementById("text").style.color=getRandomColor();
+	}
+
 	document.getElementById("#zipcode").onkeypress = function(e)
 	{
 		if (!e) e = window.event;
@@ -61,6 +66,7 @@ window.onload = function()
 		{
 			getLocation();
 			randomizeBGColor();
+			randomizeFontColor();
 		}
 	}
 }
