@@ -68,14 +68,14 @@ window.onload = function()
 
 	function toggleKitty()
 	{
-		var kitties = 'abde'.split('');
+		var kitties = 'abdef'.split('');
 		var pickone = "url(" + kitties[Math.floor(Math.random() * kitties.length)] + ".png)";
 		document.getElementById("sideB").style.background=pickone;
 	}
 
 	function togglePuppy()
 	{
-		var puppies = '1245'.split('');
+		var puppies = '12456'.split('');
 		var pickone = "url(" + puppies[Math.floor(Math.random() * puppies.length)] + ".png)";
 		document.getElementById("sideA").style.background=pickone;
 	}
@@ -106,8 +106,9 @@ window.onload = function()
 			"I wish we spent more time together, " + p + ". You are such good company.",
 			"There's no where in the world I'd rather be than by your side, " + p + ".",
 			"Have you seen " + p + "'s smile lately? Beautiful!",
-			"The only reason I need to love is you, " + p + ".",
-			"I can't believe how strong you've been, " + p +". You inspire me!"
+			p + ", all you need to do is believe in yourself! You'll never stop growing.",
+			"I can't believe how strong you've been, " + p +". You inspire me!",
+			"I never felt so lucky until I met you, " + p + "."
 		];
 		x.innerHTML = compliments[Math.floor(Math.random() * compliments.length)];
 		x.style.textAlign = "center";
