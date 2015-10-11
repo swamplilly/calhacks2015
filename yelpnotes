@@ -4,6 +4,7 @@ import oauth2
 import random
 
 #location parameters go as "location=zip"
+#change for the sake of change
 
 #In line with yelp samples
 Api_Host = 'api.yelp.com'
