@@ -16,7 +16,9 @@ window.onload = function()
 
 	function showPosition(position)
 	{
-		x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+		lat = position.coords.latitude;
+		lon = position.coords.longitude;
+		x.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lon;
 		var httpRequest = new XMLHttpRequest();
 		// httpRequest.onreadystatechange = function()
 		// {
@@ -55,7 +57,7 @@ window.onload = function()
 
 	function randomizeFontColor()
 	{
-		document.getElementById("t1").style.color=getRandomColor();
+		document.getElementById("text").style.color=getRandomColor();
 	}
 
 	function waitForIt()
