@@ -40,6 +40,8 @@ input {
   height: 350px;
   width: 400px;
   line-height: 80px;
+  background-color: white;
+  opacity: .8;
   margin: 0 auto; }
 
 #btn {
@@ -50,15 +52,13 @@ input {
   margin-right: 4vw;
   float: right;
   height: 300px;
-  width: 300px;
-  background-image: url("1.png"); }
+  width: 300px; }
 
 #sideB {
   margin-top: 45vh;
   margin-left: 4vw;
   position: fixed;
   height: 300px;
-  width: 300px;
-  background-image: url("a.png"); }
+  width: 300px; }
 
 /*# sourceMappingURL=bamfstyle.css.map */

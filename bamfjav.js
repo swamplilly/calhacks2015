@@ -57,13 +57,27 @@ window.onload = function()
 
 	function randomizeFontColor()
 	{
-		document.getElementById("text").style.color=getRandomColor();
+		document.getElementById("t1").style.color=getRandomColor();
 	}
 
 	function waitForIt()
 	{
 		var a = document.getElementById("geotest");
 		a.innerHTML = "Wait for it...";
+	}
+
+	function toggleKitty()
+	{
+		var kitties = 'ab'.split('');
+		var pickone = "url(" + kitties[Math.floor(Math.random() * 2)] + ".png)";
+		document.getElementById("sideB").style.background=pickone;
+	}
+
+	function togglePuppy()
+	{
+		var puppies = '12'.split('');
+		var pickone = "url(" + puppies[Math.floor(Math.random() * 2)] + ".png)";
+		document.getElementById("sideA").style.background=pickone;
 	}
 
 	document.getElementById("#zipcode").onkeypress = function(e)
@@ -76,8 +90,9 @@ window.onload = function()
 			randomizeBGColor();
 			randomizeFontColor();
 			waitForIt();
+			toggleKitty();
+			togglePuppy();
 		}
-		
 	}
 }
 
