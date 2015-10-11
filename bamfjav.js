@@ -68,15 +68,15 @@ window.onload = function()
 
 	function toggleKitty()
 	{
-		var kitties = 'ab'.split('');
-		var pickone = "url(" + kitties[Math.floor(Math.random() * 2)] + ".png)";
+		var kitties = 'abd'.split('');
+		var pickone = "url(" + kitties[Math.floor(Math.random() * 3)] + ".png)";
 		document.getElementById("sideB").style.background=pickone;
 	}
 
 	function togglePuppy()
 	{
-		var puppies = '12'.split('');
-		var pickone = "url(" + puppies[Math.floor(Math.random() * 2)] + ".png)";
+		var puppies = '124'.split('');
+		var pickone = "url(" + puppies[Math.floor(Math.random() * 3)] + ".png)";
 		document.getElementById("sideA").style.background=pickone;
 	}
 
