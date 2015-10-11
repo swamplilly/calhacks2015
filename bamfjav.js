@@ -18,7 +18,7 @@ window.onload = function()
 	{
 		lat = position.coords.latitude;
 		lon = position.coords.longitude;
-		x.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lon;
+		//x.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lon;
 		var httpRequest = new XMLHttpRequest();
 		// httpRequest.onreadystatechange = function()
 		// {
@@ -69,15 +69,40 @@ window.onload = function()
 	function toggleKitty()
 	{
 		var kitties = 'abd'.split('');
-		var pickone = "url(" + kitties[Math.floor(Math.random() * 3)] + ".png)";
+		var pickone = "url(" + kitties[Math.floor(Math.random() * kitties.length)] + ".png)";
 		document.getElementById("sideB").style.background=pickone;
 	}
 
 	function togglePuppy()
 	{
 		var puppies = '124'.split('');
-		var pickone = "url(" + puppies[Math.floor(Math.random() * 3)] + ".png)";
+		var pickone = "url(" + puppies[Math.floor(Math.random() * puppies.length)] + ".png)";
 		document.getElementById("sideA").style.background=pickone;
+	}
+
+	function niceThings()
+	{
+		var p = document.getElementById("#zipcode").value;
+		var compliments = [
+			"Of all the blessings bestowed upon this world, " + p + " is the most wonderful.",
+			p + "...<br>What a beautiful name!",
+			p + " has the biggest heart, and the brightest mind.",
+			"I believe in you, " + p + "! Keep on doing your best!",
+			"There isn't a star in the world that shine's brighter than " + p + "'s smile.",
+			"You've come so far, " + p + "! Don't ever forget the progress you made.",
+			p + " is an amazing friend, a hard worker, and a genuine person.",
+			"You're doing great, " + p + "! I'm so proud of you.",
+			"I'm so glad I met you, " + p + ". You're an amazing person.",
+			p + "'s laugh can brighten up an entire room!",
+			p + ", you are so kind and generous. I know you'll go far in life!",
+			"It's not a party until " + p + "is here!",
+			"You've been working so hard, " + p + "! Don't be so hard on yourself.",
+			"I've never had any doubt in you, " + p + ". I always knew you could do it!",
+			p + ", you deserve the best this world has to offer. Don't ever forget that.",
+			p + " is my favorite person!",
+			"You are doing so great today, " + p + ", keep up the good work!"
+		];
+		x.innerHTML = compliments[Math.floor(Math.random() * compliments.length)];
 	}
 
 	document.getElementById("#zipcode").onkeypress = function(e)
@@ -89,9 +114,10 @@ window.onload = function()
 			getLocation();
 			randomizeBGColor();
 			randomizeFontColor();
-			waitForIt();
+			//waitForIt();
 			toggleKitty();
 			togglePuppy();
+			niceThings();
 		}
 	}
 }
