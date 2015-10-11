@@ -34,6 +34,9 @@
   font-size: 35px;
   top: 45%; }
 
+input {
+  text-align: center; }
+
 #geotest {
   height: 50px;
   width: 100px;

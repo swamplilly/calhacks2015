@@ -7,7 +7,7 @@ window.onload = function()
 	{
 		if (navigator.geolocation)
 		{
-			navigator.geolocation.getCurrentPosition(showPosition, error);
+			navigator.geolocation.getCurrentPosition(showPosition, showError);
 		} else
 		{ 
 			x.innerHTML = "Geolocation is not supported by this browser.";
@@ -32,13 +32,38 @@ window.onload = function()
 		alert(JSON.stringify(coords));
 	}
 
-	function error()
-	{}
-
-	document.getElementById("#btn").onclick=function()
+	function showError(error)
 	{
-		getLocation();
+    	switch(error.code)
+    	{
+        	case error.PERMISSION_DENIED:
+            	x.innerHTML = "User denied the request for Geolocation."
+            	break;
+     	   case error.POSITION_UNAVAILABLE:
+        	    x.innerHTML = "Location information is unavailable."
+        	    break;
+      	  case error.TIMEOUT:
+        	    x.innerHTML = "The request to get user location timed out."
+            	break;
+     	   case error.UNKNOWN_ERROR:
+        	    x.innerHTML = "An unknown error occurred."
+            	break;
+    	}
 	}
 
+	// document.getElementById("#btn").onclick = function()
+	// {
+	// 	getLocation();
+	// }
+
+	document.getElementById("#zipcode").onkeypress = function(e)
+	{
+		if (!e) e = window.event;
+		var keyCode = e.keyCode || e.which;
+		if (keyCode == '13')
+		{
+			getLocation();
+		}
+	}
 }
 
