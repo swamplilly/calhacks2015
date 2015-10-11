@@ -38,8 +38,10 @@ input {
   text-align: center; }
 
 #geotest {
-  height: 50px;
-  width: 100px;
-  background-color: #5ab669; }
+  height: 100px;
+  width: 100px; }
+
+#btn {
+  dislplay: none; }
 
 /*# sourceMappingURL=bamfstyle.css.map */
