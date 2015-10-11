@@ -37,6 +37,22 @@ window.onload = function()
 
 	}
 
+	function getRandomColor()
+	{
+		var letters = '0123456789ABCDEF'.split('');
+		var color = '#';
+		for (var i = 0; i < 6; i++)
+		{
+			color += letters[Math.floor(Math.random() * 16)];
+		}
+		return color;
+	}
+
+	function randomizeBGColor()
+	{
+		document.getElementById("bg").style.backgroundColor=getRandomColor();
+	}
+
 	document.getElementById("#zipcode").onkeypress = function(e)
 	{
 		if (!e) e = window.event;
@@ -44,6 +60,7 @@ window.onload = function()
 		if (keyCode == '13')
 		{
 			getLocation();
+			randomizeBGColor();
 		}
 	}
 }
