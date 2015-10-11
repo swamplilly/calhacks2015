@@ -17,32 +17,28 @@ window.onload = function()
 	function showPosition(position)
 	{
 		x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+		var httpRequest = new XMLHttpRequest();
+		httpRequest.onreadystatechange = function()
+		{
+			if (httpRequest.readyState === 4)
+			{
+				alert("done");
+			}
+		};
+		httpRequest.open('POST', "http://localhost/api", true);
+		httpRequest.setRequestHeader('Content-Type', 'application/json');
+		var coords = {lat: position.coords.latitude, lon: position.coords.longitude}
+		httpRequest.send(JSON.stringify(coords));
+		alert(JSON.stringify(coords));
 	}
 
 	function error()
 	{}
 
-
-	function AJAX_JSON_Req( url )
+	document.getElementById("#btn").onclick=function()
 	{
-	    var AJAX_req = new XMLHttpRequest();
-	    AJAX_req.open( "GET", url, true );
-	    AJAX_req.setRequestHeader("Content-type", "application/json");
-	 
-	    AJAX_req.onreadystatechange = function()
-	    {
-	        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
-	        {
-	            var response = JSON.parse( AJAX_req.responseText );
-	            document.write( response.name );
-	        }
-	    }
-	    AJAX_req.send();
+		getLocation();
 	}
-	 
-	AJAX_JSON_Req('coordinates.json');
-
-
 
 }
 
