@@ -55,7 +55,13 @@ window.onload = function()
 
 	function randomizeFontColor()
 	{
-		document.getElementById("text").style.color=getRandomColor();
+		document.getElementById("t1").style.color=getRandomColor();
+	}
+
+	function waitForIt()
+	{
+		var a = document.getElementById("geotest");
+		a.innerHTML = "Wait for it...";
 	}
 
 	document.getElementById("#zipcode").onkeypress = function(e)
@@ -67,6 +73,7 @@ window.onload = function()
 			getLocation();
 			randomizeBGColor();
 			randomizeFontColor();
+			waitForIt();
 		}
 	}
 }

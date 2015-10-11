@@ -23,7 +23,7 @@
 	line-height: 50px;
 	position:absolute;
 	left:45%;
-	top:45%;
+	top:30%;
 	margin:-100px 0 0 -150px;
 	font-size: 35px;
 	font-family: sans-serif;
@@ -53,9 +53,11 @@ input
 
 #geotest
 {
-	height: 100px;
-	width: 100px;
-	// background-color: #5ab669;
+	height: 350px;
+	width: 400px;
+	line-height: 80px;
+	//background-color: #5ab669;
+	margin: 0 auto;
 }
 
 #btn
