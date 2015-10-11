@@ -77,6 +77,7 @@ window.onload = function()
 			randomizeFontColor();
 			waitForIt();
 		}
+		
 	}
 }
 

@@ -64,3 +64,28 @@ input
 {
 	dislplay: none;
 }
+
+#sideA
+{
+	margin-top: 45vh;
+	margin-right: 4vw;
+	float: right;
+	height: 300px;
+	width: 300px;
+	background-image: url("1.png");
+}
+
+#sideB
+{
+	margin-top: 45vh;
+	margin-left: 4vw;
+	position: fixed;
+	height: 300px;
+	width: 300px;
+	background-image: url("a.png");
+}
+
+
+
+
+
