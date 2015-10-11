@@ -96,14 +96,18 @@ window.onload = function()
 			p + "'s laugh can brighten up an entire room!",
 			p + ", you are so kind and generous. I know you'll go far in life!",
 			"It's not a party until " + p + " is here!",
-			"You've been working so hard, " + p + "! Don't be so hard on yourself.",
+			"You've been working so hard, " + p + "! Don't be so tough on yourself.",
 			"I've never had any doubt in you, " + p + ". I always knew you could do it!",
 			p + ", you deserve the best this world has to offer. Don't ever forget that.",
 			p + " is my favorite person!",
 			"You are doing so great today, " + p + ", keep up the good work!",
 			"There is not a force in this world that can match " + p + "'s kindness.",
 			p + ", your hard work never goes unnoticed. I appreciate you!",
-			"I wish we spent more time together, " + p + ". You are such good company."
+			"I wish we spent more time together, " + p + ". You are such good company.",
+			"There's no where in the world I'd rather be than by your side, " + p + ".",
+			"Have you seen " + p + "'s smile lately? Beautiful!",
+			"The only reason I need to love is you, " + p + ".",
+			"I can't believe how strong you've been, " + p +". You inspire me!"
 		];
 		x.innerHTML = compliments[Math.floor(Math.random() * compliments.length)];
 		x.style.textAlign = "center";
