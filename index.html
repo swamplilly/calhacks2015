@@ -20,23 +20,32 @@
 	</div>
 
 	<script>
-	var x = document.getElementById("geotest");
-	var lat, lon;
+	// window.onload = function() 
+	// {
+		var x = document.getElementById("geotest");
+		var lat, lon;
 
-	function getLocation()
-	{
-    	if (navigator.geolocation)
-    	{
-        	navigator.geolocation.getCurrentPosition(showPosition);
-    	} else
-    	{ 
-        	x.innerHTML = "Geolocation is not supported by this browser.";
-    	}
-	}
+		function getLocation()
+		{
+    		if (navigator.geolocation)
+  		  	{
+        		navigator.geolocation.getCurrentPosition(showPosition, error);
+    		} else
+    		{ 
+        		x.innerHTML = "Geolocation is not supported by this browser.";
+    		}
+		}
 
-	function showPosition(position) {
-    	x.innerHTML = "Latitude: " + lat + "<br>Longitude: ";	
-	}
+		function showPosition(position) {
+			// lat = "13";
+    		x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+		}
+
+		function error()
+		{
+
+		}
+	// }
 	</script>
 </body>
 </html>
