@@ -43,14 +43,16 @@
 input {
   text-align: center; }
 
-#geotest {
+#geowrap {
   height: 350px;
   width: 400px;
   line-height: 80px;
   background-color: white;
   opacity: .8;
   margin: 0 auto;
-  padding: 10px; }
+  padding: 10px;
+  text-align: center;
+  vertical-align: center; }
 
 #btn {
   dislplay: none; }

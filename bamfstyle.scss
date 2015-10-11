@@ -60,7 +60,7 @@ input
 	text-align: center;
 }
 
-#geotest
+#geowrap
 {
 	height: 350px;
 	width: 400px;
@@ -69,6 +69,13 @@ input
 	opacity: .8;
 	margin: 0 auto;
 	padding: 10px;
+	text-align: center;
+	vertical-align: center;
+}
+
+#geotest
+{
+	
 }
 
 #btn

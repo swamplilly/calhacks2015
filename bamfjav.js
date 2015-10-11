@@ -68,14 +68,14 @@ window.onload = function()
 
 	function toggleKitty()
 	{
-		var kitties = 'abd'.split('');
+		var kitties = 'abde'.split('');
 		var pickone = "url(" + kitties[Math.floor(Math.random() * kitties.length)] + ".png)";
 		document.getElementById("sideB").style.background=pickone;
 	}
 
 	function togglePuppy()
 	{
-		var puppies = '124'.split('');
+		var puppies = '1245'.split('');
 		var pickone = "url(" + puppies[Math.floor(Math.random() * puppies.length)] + ".png)";
 		document.getElementById("sideA").style.background=pickone;
 	}
@@ -95,14 +95,19 @@ window.onload = function()
 			"I'm so glad I met you, " + p + ". You're an amazing person.",
 			p + "'s laugh can brighten up an entire room!",
 			p + ", you are so kind and generous. I know you'll go far in life!",
-			"It's not a party until " + p + "is here!",
+			"It's not a party until " + p + " is here!",
 			"You've been working so hard, " + p + "! Don't be so hard on yourself.",
 			"I've never had any doubt in you, " + p + ". I always knew you could do it!",
 			p + ", you deserve the best this world has to offer. Don't ever forget that.",
 			p + " is my favorite person!",
-			"You are doing so great today, " + p + ", keep up the good work!"
+			"You are doing so great today, " + p + ", keep up the good work!",
+			"There is not a force in this world that can match " + p + "'s kindness.",
+			p + ", your hard work never goes unnoticed. I appreciate you!",
+			"I wish we spent more time together, " + p + ". You are such good company."
 		];
 		x.innerHTML = compliments[Math.floor(Math.random() * compliments.length)];
+		x.style.textAlign = "center";
+		x.style.verticalAlign = "middle";
 	}
 
 	document.getElementById("#zipcode").onkeypress = function(e)
