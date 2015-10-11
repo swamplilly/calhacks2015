@@ -1,40 +1,24 @@
-$(document).ready(function()
+var x = document.getElementById("geotest");
+var lat, lon;
+
+function getLocation()
 {
-	// $("#zipcode").bind("click",function()
-	// {
-	// 	alert("Hello");
-	// }
-
-	// $('.form').data('bgcolor', 'pink').hover(function()
-	// {
-	// 	 var $this = $(this);
- //    	var newBgc = $this.data('bgcolor');
- //    	$this.data('bgcolor', $this.css('background-color')).css('background-color', newBgc);
-	// }
-
-	// $("#geotest").hover(
-	// function()
-	// {
-	// 	var $this = $(this);
-	// 	$this.data("bgcolor", $this.css('background-color')).css('background-color', 'yellow');
-	// },
-	// function()
-	// {
-	// 	var $this = $(this);
-	// 	$this.css('background-color'), $this.data('bgcolor'));
-	// }
-
-	$('#geotest').mouseenter(
-		function()
+	if (navigator.geolocation)
 	{
-		var $this = $(this);
-		$this.animate(
-		{
-			width: '+=20px'
-		});
-	});
+		navigator.geolocation.getCurrentPosition(showPosition, error);
+	} else
+	{ 
+		x.innerHTML = "Geolocation is not supported by this browser.";
+	}
 }
 
+function showPosition(position)
+{
+	x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+}
+
+function error()
+{}
 
 
 
